@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    background-image: url("宝藏.png"); 
+    background-size: cover; /* 覆盖整个屏幕 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 不重复图片 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px; /* 为固定标题留出空间 */
+  }
+  
+  .container {
+    text-align: center;
+    position: fixed; /* 固定容器位置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* 确保容器在内容之上 */
+    display: flex; /* 添加Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    flex-direction: column; /* 垂直排列 */
+    margin-top: 30px; /* 将标题和按钮下移 */
+  }
+  
+  h1 {
+    color: #f4f2f2;/* 设置标题颜色 */
+    font-size: 72px; /* 设置标题字体大小 */
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* 当鼠标悬停在按钮上时，按钮的背景颜色会变为深蓝色 */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #result {
+    
+    padding: 20px;
+    border: 1px solid transparent; /* 设置边框颜色为透明 */
+    border-radius: 5px;
+    background-color: transparent; /* 设置背景颜色为透明 */
+    max-width: 600px;
+    text-align: left;
+    position: relative; /* 相对于固定容器定位 */
+  }
+
+  .result-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* 设置背景颜色为半透明 */
+    /*background-color: rgb(253, 253, 247);*/
+    margin-bottom: 10px;
+    /*border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 10px;*/
+    width: 300px;
+    height: 100px;
+   
+}
+  .result-box img {
+    display: block; /* 设置图片为块级元素 */
+    margin: auto; /* 水平和垂直居中 */
+    width: 100x; /* 设置图片宽度 */
+    height: 70px; /* 设置图片高度 */
+}
+
+.result-box p {
+  color: #040404; /* 设置字体颜色为深灰色 */
+  font-size: 16px; /* 设置字体大小为16像素 */
+}
+
+  #loading {
+    display: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
